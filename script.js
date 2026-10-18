@@ -1,8 +1,7 @@
 const status = document.querySelector('#status');
 const greetings = [
   'Hello from GitHub Pages!',
-  'สวัสดีจาก GitHub Actions!',
-  'Deployed automatically 🚀'
+  'Deployed automatically '
 ];
 let greetIndex = 0;
 
@@ -16,7 +15,7 @@ const themeBtn = document.querySelector('#themeBtn');
 
 function applyTheme(dark) {
   document.body.classList.toggle('dark', dark);
-  themeBtn.textContent = dark ? '☀️ Light' : '🌙 Dark';
+  themeBtn.textContent = dark ? ' Light' : ' Dark';
 }
 
 let savedTheme = null;
