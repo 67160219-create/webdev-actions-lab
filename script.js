@@ -1,13 +1,30 @@
 const status = document.querySelector('#status');
-const themeBtn = document.querySelector('#themeBtn');
+const greetings = [
+  'Hello from GitHub Pages!',
+  'สวัสดีจาก GitHub Actions!',
+  'Deployed automatically 🚀'
+];
+let greetIndex = 0;
 
 document.querySelector('#helloBtn').addEventListener('click', () => {
-  status.textContent = 'Hello from GitHub Pages!';
+  status.textContent = greetings[greetIndex];
+  greetIndex = (greetIndex + 1) % greetings.length;
 });
 
+// Toggle Theme (จำค่าที่เลือกไว้ใน localStorage)
+const themeBtn = document.querySelector('#themeBtn');
+
+function applyTheme(dark) {
+  document.body.classList.toggle('dark', dark);
+  themeBtn.textContent = dark ? '☀️ Light' : '🌙 Dark';
+}
+
+let savedTheme = null;
+try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
+applyTheme(savedTheme === 'dark');
+
 themeBtn.addEventListener('click', () => {
-  const root = document.documentElement;
-  const isDark = root.getAttribute('data-theme') === 'dark';
-  root.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  themeBtn.textContent = isDark ? 'เปลี่ยนธีม (Dark)' : 'เปลี่ยนธีม (Light)';
+  const dark = !document.body.classList.contains('dark');
+  applyTheme(dark);
+  try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
 });
