@@ -3,51 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Pages Lab</title>
+  <title>Thanawat Phirin | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar">
-    <span class="brand">WebDev Actions Lab</span>
+    <a class="brand" href="#top">Thanawat P.</a>
     <nav>
       <a href="#about">About Me</a>
       <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
     <button id="themeBtn" class="ghost" aria-label="Toggle theme">🌙 Dark</button>
   </header>
 
-  <main>
-    <section class="card hero">
-      <h1>Welcome to My Web Development Lab</h1>
-      <p>ชื่อ: Thanawat Phirin | รหัสนิสิต: 67160219</p>
-      <p>ยินดีต้อนรับสู่เว็บไซต์ที่ Deploy อัตโนมัติด้วย GitHub Actions + GitHub Pages</p>
-      <p id="status">Ready to deploy</p>
-      <button id="helloBtn">Say Hello</button>
+  <main id="top">
+    <section class="hero">
+      <div class="avatar" aria-hidden="true">TP</div>
+      <div class="hero-text">
+        <p class="hello">สวัสดีครับ ผมคือ</p>
+        <h1>Thanawat Phirin</h1>
+        <p class="role">นิสิตที่สนใจการพัฒนาเว็บไซต์ │ รหัสนิสิต 67160219</p>
+        <p id="status">Ready to deploy</p>
+        <div class="cta">
+          <button id="helloBtn" class="hello-btn">Say Hello</button>
+          <a class="link-btn" href="#contact">ติดต่อผม</a>
+        </div>
+      </div>
     </section>
 
-    <section id="about" class="card">
+    <section id="about" class="block">
       <h2>About Me</h2>
-      <p>สวัสดี ผมนายธนวัฒน์ ไพรินทร์ รหัสนิสิต 67160219 ผมสนใจการพัฒนาเว็บไซต์ ชอบเรียนรู้
-        และกำลังฝึกใช้ Git, GitHub Actions</p>
+      <div class="two-col">
+        <p>สวัสดี ผมนายธนวัฒน์ ไพรินทร์ สนใจการพัฒนาเว็บไซต์ ชอบเรียนรู้สิ่งใหม่ และกำลังฝึกใช้ Git กับ GitHub Actions เพื่อทำให้การส่งงานขึ้นเว็บเป็นอัตโนมัติ</p>
+        <dl class="facts">
+          <div><dt>ชื่อ</dt><dd>Thanawat Phirin</dd></div>
+          <div><dt>รหัสนิสิต</dt><dd>67160219</dd></div>
+          <div><dt>กำลังเรียนรู้</dt><dd>CI/CD, GitHub Pages</dd></div>
+        </dl>
+      </div>
     </section>
 
-    <section id="skills" class="card">
+    <section id="skills" class="block">
       <h2>Skills</h2>
-      <ul class="skills">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Git &amp; GitHub</li>
-        <li>GitHub Actions</li>
-        <li>GitHub Pages</li>
-      </ul>
+      <div class="skill-groups">
+        <div>
+          <h3>Web</h3>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul class="chips"><li>Git &amp; GitHub</li><li>GitHub Actions</li><li>GitHub Pages</li></ul>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="card">
+    <section id="projects" class="block">
+      <h2>Projects</h2>
+      <article class="project">
+        <h3>Web Development Lab</h3>
+        <p>เว็บไซต์ Static ที่ Deploy ขึ้น GitHub Pages อัตโนมัติด้วย GitHub Actions ทุกครั้งที่ push ไปที่ branch main</p>
+        <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Actions</li></ul>
+        <a href="https://github.com/67160219-create/webdev-actions-lab" target="_blank" rel="noopener">ดูโค้ดบน GitHub</a>
+      </article>
+    </section>
+
+    <section id="contact" class="block">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:67160219@go.buu.ac.th">67160219@go.buu.ac.th</a></p>
-      <p>GitHub: <a href="https://github.com/67160219-create" target="_blank" rel="noopener">https://github.com/67160219-create</a></p>
+      <ul class="contact">
+        <li><span>Email</span> <a href="mailto:67160219@go.buu.ac.th">67160219@go.buu.ac.th</a></li>
+        <li><span>GitHub</span> <a href="https://github.com/67160219-create" target="_blank" rel="noopener">github.com/67160219-create</a></li>
+      </ul>
     </section>
   </main>
 
